@@ -33,7 +33,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    color: #111;
+    color: #000;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -43,5 +43,5 @@
 }
 
 .VdM-play-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
