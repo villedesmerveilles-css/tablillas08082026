@@ -1,47 +1,38 @@
 .VdM-SinglePlayer {
     display: inline-flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid #d95325;
+    background: transparent !important; /* Forzamos transparencia total */
+    border: 1px solid #d95325 !important; /* Borde fino naranja */
     border-radius: 20px;
     padding: 2px 10px;
     gap: 10px;
-    color: #fff;
+    color: #d95325 !important; /* Texto en naranja para que combine */
     font-family: var(--f2);
     font-size: 11px;
     height: 28px;
-    backdrop-filter: blur(5px);
 }
 
 .VdM-player-icon {
-    color: #d95325;
     font-size: 12px;
 }
 
-.VdM-player-info {
-    flex-grow: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
 .VdM-play-btn {
-    background: #d95325;
+    background: #d95325 !important; /* Solo el botón naranja */
     border: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    color: #000;
+    color: #000 !important;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 8px;
-    transition: transform 0.2s;
 }
 
-.VdM-play-btn:hover {
-    transform: scale(1.1);
+.VdM-player-info {
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d95325 !important;
 }
