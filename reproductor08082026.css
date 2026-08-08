@@ -16,6 +16,13 @@
     font-size: 12px;
 }
 
+.VdM-player-info {
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d95325 !important;
+}
+
 .VdM-play-btn {
     background: #d95325 !important;
     border: none;
@@ -28,11 +35,4 @@
     align-items: center;
     justify-content: center;
     font-size: 8px;
-}
-
-.VdM-player-info {
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #d95325 !important;
 }
