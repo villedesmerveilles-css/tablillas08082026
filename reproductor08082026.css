@@ -36,11 +36,10 @@
     font-size: 8px;
 }
 
-/* Contenedor elegante para reproductores */
 .VdM-MusicWrapper {
-    background: #e9e9e9; /* Color de fondo gris claro de la tablilla */
-    border-left: 5px solid #d95325; /* Borde lateral naranja */
-    border-right: 5px solid #d95325; /* Borde lateral naranja */
+    background: #e9e9e9;
+    border-left: 5px solid #d95325;
+    border-right: 5px solid #d95325;
     padding: 15px;
     margin: 20px 0;
     border-radius: 5px;
