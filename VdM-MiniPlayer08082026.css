@@ -1,0 +1,32 @@
+.VdM-MiniPlayer {
+    display: inline-flex;
+    align-items: center;
+    background: #e9e9e9;
+    border: 1px solid #d95325;
+    border-radius: 20px;
+    padding: 4px 8px;
+    height: 28px;
+}
+
+.VdM-MiniPlayer .yt-hidden-frame {
+    display: none !important;
+}
+
+.VdM-MiniPlayer .vdm-btn {
+    background: #d95325;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    padding: 0;
+}
+
+.VdM-MiniPlayer .vdm-btn i {
+    pointer-events: none;
+}
