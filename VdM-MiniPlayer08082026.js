@@ -16,8 +16,15 @@ function onYouTubeIframeAPIReady() {
         container.appendChild(div);
 
         var player = new YT.Player(frameId, {
+            height: '1',
+            width: '1',
             videoId: videoId,
-            playerVars: { 'autoplay': 0, 'controls': 0, 'rel': 0 },
+            playerVars: { 
+                'autoplay': 0, 
+                'controls': 0,
+                'enablejsapi': 1,
+                'origin': window.location.origin
+            },
             events: {
                 'onReady': function(event) {
                     container._player = event.target;
