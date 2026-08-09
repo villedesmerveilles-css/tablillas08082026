@@ -16,20 +16,24 @@ function onYouTubeIframeAPIReady() {
         container.appendChild(div);
 
         var player = new YT.Player(frameId, {
-            height: '0',
-            width: '0',
             videoId: videoId,
-            playerVars: { 'autoplay': 0, 'controls': 0 }
+            playerVars: { 'autoplay': 0, 'controls': 0, 'rel': 0 },
+            events: {
+                'onReady': function(event) {
+                    container._player = event.target;
+                }
+            }
         });
-
-        container._player = player;
 
         var playBtn = container.querySelector('.btn-play-mini');
         playBtn.addEventListener('click', function() {
+            if (!container._player) return;
+
+            var player = container._player;
             var state = player.getPlayerState();
             var icon = playBtn.querySelector('i');
 
-            if (state == YT.PlayerState.PLAYING) {
+            if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) {
                 player.pauseVideo();
                 icon.className = "fa-solid fa-play";
             } else {
