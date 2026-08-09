@@ -1,7 +1,7 @@
 .VdM-MiniPlayer {
     display: inline-flex;
     align-items: center;
-    background: var(--n2);
+    background: var(--n1);
     border: 1px solid #d95325;
     border-radius: 25px;
     padding: 6px 14px;
