@@ -4,8 +4,9 @@
     background: #e9e9e9;
     border: 1px solid #d95325;
     border-radius: 20px;
-    padding: 4px 8px;
+    padding: 4px 10px;
     height: 28px;
+    gap: 8px;
 }
 
 .VdM-MiniPlayer .yt-hidden-frame {
@@ -25,8 +26,18 @@
     justify-content: center;
     font-size: 8px;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .VdM-MiniPlayer .vdm-btn i {
     pointer-events: none;
+}
+
+.VdM-MiniPlayer .vdm-song-info {
+    font-family: var(--f2);
+    font-size: 11px;
+    color: #d95325;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
