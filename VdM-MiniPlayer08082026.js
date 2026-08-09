@@ -15,6 +15,17 @@ function onYouTubeIframeAPIReady() {
         div.className = 'yt-hidden-frame';
         container.appendChild(div);
 
+        // Crear barra de progreso en el HTML dinámicamente si no existe
+        if (!container.querySelector('.vdm-progress-bar')) {
+            var progressBar = document.createElement('div');
+            progressBar.className = 'vdm-progress-bar';
+            progressBar.innerHTML = '<div class="vdm-progress-fill"></div>';
+            container.appendChild(progressBar);
+        }
+
+        var fillBar = container.querySelector('.vdm-progress-fill');
+        var player, progressInterval;
+
         var player = new YT.Player(frameId, {
             height: '1',
             width: '1',
@@ -28,6 +39,20 @@ function onYouTubeIframeAPIReady() {
             events: {
                 'onReady': function(event) {
                     container._player = event.target;
+                },
+                'onStateChange': function(event) {
+                    if (event.data == YT.PlayerState.PLAYING) {
+                        progressInterval = setInterval(function() {
+                            var current = player.getCurrentTime();
+                            var total = player.getDuration();
+                            if (total > 0) {
+                                var percent = (current / total) * 100;
+                                fillBar.style.width = percent + '%';
+                            }
+                        }, 500);
+                    } else {
+                        clearInterval(progressInterval);
+                    }
                 }
             }
         });
@@ -36,7 +61,6 @@ function onYouTubeIframeAPIReady() {
         playBtn.addEventListener('click', function() {
             if (!container._player) return;
 
-            var player = container._player;
             var state = player.getPlayerState();
             var icon = playBtn.querySelector('i');
 
