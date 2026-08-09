@@ -15,7 +15,7 @@ function onYouTubeIframeAPIReady() {
         div.className = 'yt-hidden-frame';
         container.appendChild(div);
 
-        // Crear barra de progreso en el HTML dinámicamente si no existe
+        // Asegurar barra de progreso
         if (!container.querySelector('.vdm-progress-bar')) {
             var progressBar = document.createElement('div');
             progressBar.className = 'vdm-progress-bar';
@@ -24,7 +24,7 @@ function onYouTubeIframeAPIReady() {
         }
 
         var fillBar = container.querySelector('.vdm-progress-fill');
-        var player, progressInterval;
+        var progressInterval;
 
         var player = new YT.Player(frameId, {
             height: '1',
@@ -41,7 +41,9 @@ function onYouTubeIframeAPIReady() {
                     container._player = event.target;
                 },
                 'onStateChange': function(event) {
+                    var icon = container.querySelector('.btn-play-mini i');
                     if (event.data == YT.PlayerState.PLAYING) {
+                        if(icon) icon.className = "fa-solid fa-pause";
                         progressInterval = setInterval(function() {
                             var current = player.getCurrentTime();
                             var total = player.getDuration();
@@ -51,6 +53,9 @@ function onYouTubeIframeAPIReady() {
                             }
                         }, 500);
                     } else {
+                        if(icon && event.data == YT.PlayerState.PAUSED) {
+                            icon.className = "fa-solid fa-play";
+                        }
                         clearInterval(progressInterval);
                     }
                 }
@@ -62,21 +67,17 @@ function onYouTubeIframeAPIReady() {
             if (!container._player) return;
 
             var state = player.getPlayerState();
-            var icon = playBtn.querySelector('i');
 
             if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) {
                 player.pauseVideo();
-                icon.className = "fa-solid fa-play";
             } else {
+                // Pausar los demás reproductores en la página
                 document.querySelectorAll('.VdM-MiniPlayer').forEach(function(c) {
                     if (c._player && c !== container) {
                         c._player.pauseVideo();
-                        var otherIcon = c.querySelector('.btn-play-mini i');
-                        if(otherIcon) otherIcon.className = "fa-solid fa-play";
                     }
                 });
                 player.playVideo();
-                icon.className = "fa-solid fa-pause";
             }
         });
     });
