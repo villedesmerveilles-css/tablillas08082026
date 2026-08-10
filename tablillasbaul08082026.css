@@ -1,0 +1,470 @@
+/* --- TABLILLA ÍNDICE PRINCIPAL --- */
+.VdMIndexModern {
+    max-width: 580px;
+    width: 95%;
+    margin: 35px auto;
+    background: 
+        linear-gradient(var(--n2), var(--n2)) padding-box,
+        linear-gradient(135deg, var(--group-color, var(--gg6)) 0%, var(--gg2) 100%) border-box;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--f3);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+
+.VdMIndexMod-avatar {
+    width: 250px;
+    height: 330px;
+    flex-shrink: 0;
+    background-color: var(--n1);
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    filter: brightness(.4) grayscale(.5);
+    transition: all .7s ease;
+    min-height: 260px;
+}
+
+
+.VdMIndexMod-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+
+.VdMIndexMod-header {
+    background: var(--n1);
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+.VdMIndexMod-header h3 {
+    font-family: var(--f2);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--n4);
+    opacity: 0.20;
+}
+
+
+.VdMIndexMod-header h2 {
+    font-family: var(--f1);
+    font-size: 20px;
+    color: var(--group-color, var(--gg6));
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+
+
+
+.VdMIndexMod-card {
+    background: var(--n1) !important;
+    border-radius: 10px !important;
+    padding: 11px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+
+.VdMIndexMod-card:hover {
+    border-color: var(--group-color, var(--gg6)) !important;
+    transform: translateY(-2px);
+}
+
+
+.VdMIndexMod-left-content {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+
+.VdMIndexMod-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 50% !important;
+    background: var(--n2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--group-color, var(--gg6)) !important;
+    font-size: 13px !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+
+.VdMIndexMod-info {
+    flex: 1 !important;
+    margin-left: 16px !important;
+    text-align: left !important;
+}
+
+
+.VdMIndexMod-info h4 {
+    font-family: var(--f1) !important;
+    font-size: 8px !important;
+    color: var(--n4) !important;
+    margin: 0 !important;
+    text-align: left !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+
+.VdMIndexMod-card:hover .VdMIndexMod-info h4 {
+    color: var(--group-color, var(--gg6)) !important;
+}
+
+
+.VdMIndexMod-arrow {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    border-radius: 50% !important;
+    background: var(--n2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--n4) !important;
+    font-size: 11px !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    margin-left: 10px !important;
+    transition: all 0.3s ease;
+}
+
+
+.VdMIndexMod-card:hover .VdMIndexMod-arrow {
+    background: var(--group-color, var(--gg6)) !important;
+    color: #fff !important;
+    transform: translateX(2px);
+}
+
+
+
+
+/* --- TABLILLA CRONOLOGÍA --- */
+.VdMCronologiaA {
+    max-width: 500px;
+    width: 95%;
+    margin: 35px auto;
+    background: 
+        linear-gradient(var(--n2), var(--n2)) padding-box,
+        linear-gradient(135deg, var(--group-color, var(--gg6)) 0%, var(--gg2) 100%) border-box;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--f3);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.VdMCronA-header {
+    background: var(--n1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+.VdMCronA-header-badge {
+    grid-column: 1;
+    grid-row: 1;
+    background: var(--gg6);
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--group-color, var(--n2));
+    font-size: 14px;
+    z-index: 2;
+    justify-self: start;
+}
+
+
+.VdMCronA-header-title {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    padding: 14px 20px;
+    z-index: 1;
+}
+
+
+.VdMCronA-header h2 {
+    font-family: var(--f1);
+    font-size: 18px;
+    color: var(--group-color, var(--gg6));
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+
+.VdMCronA-item {
+    background: var(--n1);
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+}
+
+
+.VdMCronA-item:hover {
+    border-color: var(--group-color, var(--gg6));
+    transform: translateY(-2px);
+}
+
+
+.VdMCronA-info {
+    flex: 1;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    gap: 5px;
+}
+
+
+.VdMCronA-title {
+    font-family: var(--f1);
+    font-size: 8px;
+    color: var(--n4);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.VdMCronA-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.VdMCronA-title a:hover {
+    color: var(--group-color, var(--gg6));
+}
+
+
+.VdMCronA-sub {
+    font-size: 10px;
+    color: var(--n4);
+    opacity: 0.7;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.VdMCronA-status {
+    background: var(--n2);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--group-color, var(--gg6));
+    font-size: 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+    min-width: 60px;
+}
+
+
+
+
+/* --- TABLILLA RELACIONES --- */
+.VdMRelGrid {
+    max-width: 500px;
+    width: 95%;
+    margin: 35px auto;
+    background: 
+        linear-gradient(var(--n2), var(--n2)) padding-box,
+        linear-gradient(135deg, var(--group-color, var(--gg6)) 0%, var(--gg2) 100%) border-box;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--f3);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.VdMRelGrid-header {
+    background: var(--n1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+.VdMRelGrid-header-badge {
+    grid-column: 1;
+    grid-row: 1;
+    background: var(--gg6);
+    padding: 0 30px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--group-color, var(--n2));
+    font-size: 14px;
+    z-index: 2;
+    justify-self: start;
+}
+
+
+.VdMRelGrid-header-title {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    padding: 16px 20px;
+    z-index: 1;
+}
+
+
+.VdMRelGrid-header h2 {
+    font-family: var(--f1);
+    font-size: 18px;
+    color: var(--group-color, var(--gg6));
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.VdMRelGrid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+.VdMRelGrid-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--n1);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.VdMRelGrid-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 18, 18, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.VdMRelGrid-item:hover .VdMRelGrid-overlay {
+    opacity: 1;
+}
+
+
+.VdMRelGrid-item:hover {
+    border-color: var(--group-color, var(--gg6));
+    transform: translateY(-2px);
+}
+
+
+.VdMRelGrid-name {
+    font-family: var(--f1);
+    font-size: 8px;
+    color: var(--group-color, var(--gg6));
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+    width: 85%;
+}
+
+
+.VdMRelGrid-desc {
+    font-family: var(--f3);
+    font-size: 10px;
+    color: var(--n4);
+    opacity: 0.85;
+    margin: 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
